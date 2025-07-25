@@ -1,0 +1,222 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: #f7f9fc;
+  color: #333;
+  scroll-behavior: smooth;
+}
+
+.header {
+  background: #1e3a8a;
+  color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.nav a {
+  margin: 0 1rem;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+section {
+  padding: 3rem 2rem;
+}
+
+.home {
+  background: url('https://images.unsplash.com/photo-1570129477492-45c003edd2be') no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  background: #2563eb;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.services, .projects, .testimonials {
+  background: #fff;
+}
+
+.service-boxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.service-card {
+  padding: 1rem;
+  background: #f0f4f8;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  height: 200px;
+}
+
+.testimonial-box {
+  margin-top: 1rem;
+  background: #e0e7ff;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.contact form {
+  display: grid;
+  gap: 1rem;
+  max-width: 500px;
+  margin: auto;
+}
+
+.contact input, .contact textarea {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact button {
+  background: #1e3a8a;
+  color: white;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 5px;
+}
+
+.map iframe {
+  width: 100%;
+  height: 300px;
+  margin-top: 2rem;
+  border: none;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #1e3a8a;
+  color: white;
+  margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+    flex-direction: column;
+    background: #1e3a8a;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    padding: 1rem;
+  }
+  .nav.show {
+    display: flex;
+  }
+  .menu-toggle {
+    display: block;
+  }
+}
+.team {
+  background: #f9fafb;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.team-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.team-card {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 15px;
+  width: 250px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  transform-style: preserve-3d;
+  transition: transform 0.4s ease;
+}
+
+.team-card:hover {
+  transform: rotateY(10deg) scale(1.03);
+}
+
+.team-card img {
+  width: 100%;
+  border-radius: 12px;
+  height: 250px;
+  object-fit: cover;
+}
+
+.team-card h3 {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
+
+.connect {
+  padding: 2rem;
+  background: #e0f2fe;
+  text-align: center;
+}
+
+.social-buttons a {
+  margin: 0.5rem;
+  text-decoration: none;
+  background: #1e3a8a;
+  color: white;
+  padding: 0.7rem 1.2rem;
+  border-radius: 8px;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.social-buttons a:hover {
+  background: #2563eb;
+}
+
