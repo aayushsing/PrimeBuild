@@ -7,6 +7,64 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
   alert("Thanks! Your message has been sent.");
   this.reset();
 });
+// 1. Define your media list here:
+const mediaList = [
+  { type: 'image', src: 'project 1.jpg' },
+  { type: 'video', src: 'project 3.mp4' },
+  { type: 'image', src: 'project 2.jpg' },
+  { type: 'video', src: 'project 5.mp4' },
+  { type: 'image', src: 'project 2.jpg' },
+  { type: 'image', src: 'home 5.jpg' },
+  { type: 'video', src: 'project-video.mp4' },
+
+  // …add as many as you like
+];
+
+let currentMedia = 0;
+const modal = document.getElementById('mediaModal');
+const container = document.getElementById('mediaContainer');
+const btn = document.getElementById('viewWorkBtn');
+const closeBtn = modal.querySelector('.close');
+
+function showMedia(index) {
+  container.innerHTML = '';               // clear previous
+  const item = mediaList[index];
+  if (item.type === 'image') {
+    const img = document.createElement('img');
+    img.src = item.src;
+    container.appendChild(img);
+  } else {
+    const vid = document.createElement('video');
+    vid.src = item.src;
+    vid.controls = true;
+    vid.autoplay = true;
+    vid.loop = true;
+    vid.muted = true;
+    vid.playsInline = true;
+    container.appendChild(vid);
+  }
+}
+
+function changeMedia(direction) {
+  currentMedia = (currentMedia + direction + mediaList.length) % mediaList.length;
+  showMedia(currentMedia);
+}
+
+// Open modal
+btn.addEventListener('click', () => {
+  modal.style.display = 'flex';
+  currentMedia = 0;
+  showMedia(currentMedia);
+});
+
+// Close modal
+closeBtn.addEventListener('click', () => modal.style.display = 'none');
+
+// Close when clicking outside content
+window.addEventListener('click', (e) => {
+  if (e.target === modal) modal.style.display = 'none';
+});
+
 <script>
   const slider = document.getElementById("slider");
   const dotsContainer = document.getElementById("dots");
@@ -63,3 +121,5 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
 
   startAutoSlide();
 </script>
+
+
