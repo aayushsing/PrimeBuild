@@ -268,12 +268,13 @@ footer {
 }
 
 .slider img {
-  width: 100%;
-  height: 400px;
-  object-fit: cover;
-  flex-shrink: 0;
-  border-radius: 10px;
+  height: 100%;
+  width: auto;
+  margin: 0 auto;
+  display: block;
+  object-fit: contain;
 }
+
 
 @keyframes slide {
   0%    { transform: translateX(0%); }
@@ -306,6 +307,28 @@ footer {
     margin: 1rem;
   }
 }
+@media (max-width: 768px) {
+  .slider img,
+  .slider video {
+    height: auto;
+    max-height: 250px;
+  }
+}
+.slider img,
+.slider video {
+  object-fit: contain;   /* Shows full image without crop */
+  background-color: #000; /* Optional: fill background if image is smaller */
+}
+.slider img,
+.slider video {
+  object-fit: cover;
+}
+
+
+
+
+
+
 
 
 
