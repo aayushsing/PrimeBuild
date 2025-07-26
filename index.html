@@ -74,13 +74,12 @@
     <div class="slider" id="slider">
       <img src="project 1.jpg" alt="Project 1">
       <img src="project 2.jpg" alt="Project 2">
-      <img src="home 1.jpg" alt="Project 3">
-      <img src="home 3.jpg" alt="Project 4">
-      <img src="home 3.jpg" alt="Project 5">
-  <video autoplay muted loop playsinline>
-    <source src="project 5.mp4" type="video/mp4" />
-    Your browser does not support the video tag.
-  </video>
+      <img src="project 3.jpg" alt="Project 3">
+      <img src="project 5.jpg" alt="Project 4">
+      <img src="home 1.jpg" alt="Project 5">
+    </div>
+  </div>
+</section>
 
     </div>
   </div>
@@ -119,7 +118,7 @@
   <div class="social-buttons">
     <a href="https://wa.me/+918318350325" target="_blank" class="whatsapp-btn">💬 WhatsApp</a>
     <a href="" target="_blank">📘 Facebook</a>
-    <a href="" target="_blank">📸 Instagram</a>
+    <a href="https://www.instagram.com/yadavsiddharth_4747?igsh=NXYzejhvbHc4Yngx" target="_blank">📸 Instagram</a>
     <a href="" target="_blank">💼 LinkedIn</a>
     <a href="">🐦 Twitter</a>
   </div>
@@ -167,28 +166,5 @@
   <script src="script.js"></script>
 </body>
 </html>
-<script>
-  let currentIndex = 0;
-  const track = document.getElementById('sliderTrack');
-  const slides = track.querySelectorAll('img');
-  const totalSlides = slides.length;
-
-  function updateSlider() {
-    track.style.transform = `translateX(-${currentIndex * 100}%)`;
-  }
-
-  function nextSlide() {
-    currentIndex = (currentIndex + 1) % totalSlides;
-    updateSlider();
-  }
-
-  function prevSlide() {
-    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-    updateSlider();
-  }
-
-  // Auto Slide every 5 seconds
-  setInterval(nextSlide, 5000);
-</script>
 
 
